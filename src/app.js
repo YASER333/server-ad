@@ -13,6 +13,9 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const app = express();
 
 const allowedOrigins = (process.env.CLIENT_URL || '').split(',').filter(Boolean);
+app.get('/', (req, res) => {
+  res.send({ message: 'Welcome to the Attendance Management API' });
+});
 
 app.use(helmet());
 app.use(
@@ -40,4 +43,5 @@ app.use(notFound);
 app.use(errorHandler);
 
 module.exports = app;
+
 
