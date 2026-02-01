@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "lint": "echo \"No lint configured\""
+    "lint": "echo \"No lint configured\"",
+    "seed:2025": "node src/scripts/seed-2025.js"
   },
   "keywords": [
     "attendance",
@@ -32,7 +33,8 @@
     "morgan": "^1.10.1",
     "multer": "^2.0.2",
     "nodemailer": "^7.0.10",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "pdfkit": "^0.14.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
